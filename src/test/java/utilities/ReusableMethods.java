@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pages.HotelMyCap;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -69,7 +69,7 @@ public class ReusableMethods {
 
 
     public static void scroolDown(WebElement element) {
-        HotelMyCap hotelMyCap = new HotelMyCap();
+
         WebDriverWait wait = wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].scrollIntoView(true);", element);
