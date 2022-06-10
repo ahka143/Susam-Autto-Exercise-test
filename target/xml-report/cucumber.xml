@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="54.878">
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli" time="54.51">
+        <system-out>
+            <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
+And anasayfanin gorunur oldugunu test eder..................................passed
+And SignUp-Login butonuna tiklar............................................passed
+And 'Login to your account' yazisinin gorunur oldugunu test eder............passed
+And gecerli email adresini ve passwordu girer...............................passed
+And login butonuna tiklar...................................................passed
+And 'Logged in as username' textinin gorunur olugunu test eder..............passed
+And logOut butonuna tiklar..................................................passed
+And kullanicinin login sayfasina geldigini test eder........................passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

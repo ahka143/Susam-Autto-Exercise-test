@@ -1,7 +1,7 @@
 Feature: US001 kullanici AutomationExercise sitesini test eder
 
+  @ahmet
   Scenario: TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli
-
     Given kullanici "autoUrl" sayfasina gider
     And anasayfanin gorunur oldugunu test eder
     And SignUp-Login butonuna tiklar
