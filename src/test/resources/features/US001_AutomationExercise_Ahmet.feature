@@ -22,3 +22,4 @@ Feature: US001 kullanici AutomationExercise sitesini test eder
       And urun listesinin goruntulendigini test eder
       And ilk urundeki View Product butonunu tiklar
       And ürün adı, kategori, fiyat, bulunabilirlik, durum ve markanin gorunur oldugunu test eder
+      Then sayfayi kapatir

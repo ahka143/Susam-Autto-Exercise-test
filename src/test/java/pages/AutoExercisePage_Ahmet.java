@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class AutoExercisePage_Ahmet {
 
     public AutoExercisePage_Ahmet(){
@@ -58,5 +60,11 @@ public class AutoExercisePage_Ahmet {
 
     @FindBy(xpath = "//*[text()='Brand:']")
     public WebElement brandText;
+
+    @FindBy (xpath = "(//h2)[3]")
+    public WebElement allProductText;
+
+    @FindBy (xpath = "//i[@class='fa fa-plus-square']")
+    public List<WebElement> viewProductList;
 
 }

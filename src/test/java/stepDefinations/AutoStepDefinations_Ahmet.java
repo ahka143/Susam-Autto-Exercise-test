@@ -1,5 +1,6 @@
 package stepDefinations;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -53,5 +54,37 @@ public class AutoStepDefinations_Ahmet {
     @Then("sayfayi kapatir")
     public void sayfayiKapatir() {
         Driver.closeDriver();
+    }
+
+    @And("Product butonuna tiklar")
+    public void productButonunaTiklar() {
+        autoExercisePage_ahmet.productButonu.click();
+
+    }
+
+    @And("All product sayfasina gidildigini test eder")
+    public void allProductSayfasinaGidildiginiTestEder() {
+String expectedText="products";
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedText));
+    }
+
+    @And("urun listesinin goruntulendigini test eder")
+    public void urunListesininGoruntulendiginiTestEder() {
+        Assert.assertTrue(autoExercisePage_ahmet.allProductText.isDisplayed());
+    }
+
+    @And("ilk urundeki View Product butonunu tiklar")
+    public void ilkUrundekiViewProductButonunuTiklar() {
+        autoExercisePage_ahmet.ilkUrunViewProductBtonu.click();
+    }
+
+    @And("ürün adı, kategori, fiyat, bulunabilirlik, durum ve markanin gorunur oldugunu test eder")
+    public void ürünAdıKategoriFiyatBulunabilirlikDurumVeMarkaninGorunurOldugunuTestEder() {
+        Assert.assertTrue(autoExercisePage_ahmet.blueTopText.isDisplayed());
+        Assert.assertTrue(autoExercisePage_ahmet.categoryText.isDisplayed());
+        Assert.assertTrue(autoExercisePage_ahmet.fiyatText.isDisplayed());
+        Assert.assertTrue(autoExercisePage_ahmet.availebletyText.isDisplayed());
+        Assert.assertTrue(autoExercisePage_ahmet.conditionText.isDisplayed());
+        Assert.assertTrue(autoExercisePage_ahmet.brandText.isDisplayed());
     }
 }
