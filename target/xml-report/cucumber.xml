@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="54.878">
-    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli" time="54.51">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.687">
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli" time="15.335">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
 And anasayfanin gorunur oldugunu test eder..................................passed
 And SignUp-Login butonuna tiklar............................................passed
-And 'Login to your account' yazisinin gorunur oldugunu test eder............passed
-And gecerli email adresini ve passwordu girer...............................passed
-And login butonuna tiklar...................................................passed
-And 'Logged in as username' textinin gorunur olugunu test eder..............passed
-And logOut butonuna tiklar..................................................passed
-And kullanicinin login sayfasina geldigini test eder........................passed
-Then sayfayi kapatir........................................................passed
+And 'Login to your account' yazisinin gorunur oldugunu test eder............failed
+And gecerli email adresini ve passwordu girer...............................skipped
+And login butonuna tiklar...................................................skipped
+And 'Logged in as username' textinin gorunur olugunu test eder..............skipped
+And logOut butonuna tiklar..................................................skipped
+And kullanicinin login sayfasina geldigini test eder........................skipped
+Then sayfayi kapatir........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepDefinations.AutoStepDefinations_Ahmet.yazisinin_gorunur_oldugunu_test_eder(AutoStepDefinations_Ahmet.java:29)
+	at ✽.'Login to your account' yazisinin gorunur oldugunu test eder(file:///C:/Users/ahka1/IdeaProjects/com.Susam_AutomationExercise/src/test/resources/features/US001_AutomationExercise_Ahmet.feature:8)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

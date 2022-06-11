@@ -35,5 +35,28 @@ public class AutoExercisePage_Ahmet {
     @FindBy (xpath = "(//button[@class='btn btn-success'])[1]")
     public WebElement testCasesButonu;
 
+    @FindBy (xpath = "//i[@class='material-icons card_travel']")
+    public WebElement productButonu;
+
+    @FindBy (xpath = "(//i[@class='fa fa-plus-square'])[1]")
+    public WebElement ilkUrunViewProductBtonu;
+
+    @FindBy (xpath = "//*[text()='Blue Top']")
+    public WebElement blueTopText;
+
+    @FindBy (xpath = "//*[text()='Category: Women > Tops']")
+    public WebElement categoryText;
+
+    @FindBy (xpath = "//*[text()='Rs. 500']")
+    public WebElement fiyatText;
+
+    @FindBy (xpath = "//*[text()='Availability:']")
+    public WebElement availebletyText;
+
+    @FindBy(xpath = "//*[text()='Condition:']")
+    public WebElement conditionText;
+
+    @FindBy(xpath = "//*[text()='Brand:']")
+    public WebElement brandText;
 
 }

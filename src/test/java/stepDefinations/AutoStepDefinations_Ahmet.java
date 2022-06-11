@@ -26,7 +26,7 @@ public class AutoStepDefinations_Ahmet {
     }
     @Given("{string} yazisinin gorunur oldugunu test eder")
     public void yazisinin_gorunur_oldugunu_test_eder(String string) {
-       Assert.assertTrue(autoExercisePage_ahmet.loginToYourAccountText.isDisplayed());
+       Assert.assertTrue(!autoExercisePage_ahmet.loginToYourAccountText.isDisplayed());
     }
     @Given("gecerli email adresini ve passwordu girer")
     public void gecerli_email_adresini_ve_passwordu_girer() {
