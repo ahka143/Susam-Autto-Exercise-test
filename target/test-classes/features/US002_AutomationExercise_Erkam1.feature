@@ -20,3 +20,4 @@ Feature:
     And Delete Account butonuna tikla
 #   'ACCOUNT DELETED!' gorunur oldugunu dogrula
 #   'Continue' butonuna tikla
+#   yurumezse 33. satira bak

@@ -30,7 +30,7 @@ public class AutoStepDefinations_Erkam1 {
     @Given("isim ve email gir")
     public void isim_ve_email_gir() {
         autoExercisePage.nameBox.sendKeys("Erkam");
-        autoExercisePage.emailBox.sendKeys(("uslu@78rkam"));
+        autoExercisePage.emailBox.sendKeys(("uslu@79rkam"));
     }
     @Given("Signup butonuna tikla")
     public void signup_butonuna_tikla() {
