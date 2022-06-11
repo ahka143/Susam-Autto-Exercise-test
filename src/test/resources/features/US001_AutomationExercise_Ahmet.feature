@@ -13,7 +13,7 @@ Feature: US001 kullanici AutomationExercise sitesini test eder
     And kullanicinin login sayfasina geldigini test eder
     Then sayfayi kapatir
 
-    Scenario: TC02 kullanici Products sayfasini goruntuler
+    Scenario: TC02 kullanici tum urunleri ve ozelliklerini goruntuluyebilmeli
 
       Given  kullanici "autoUrl" sayfasina gider
       And anasayfanin gorunur oldugunu test eder
