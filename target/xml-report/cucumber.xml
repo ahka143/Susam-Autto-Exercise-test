@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.087">
+    <testcase classname="Unknown" name="Register User Test Case" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[Given AutomationExercise Url adresine git...................................undefined
+And anasayfanin gorunur oldugunu dogrula....................................skipped
+And SignupLogin butonuna tikla..............................................skipped
+And New User Signup gorunur oldugunu dogrula................................skipped
+And isim ve email gir.......................................................skipped
+But Signup butonuna tikla...................................................skipped
+But ENTER ACCOUNT INFORMATION yazisinin gorunur oldugunu dogrula............skipped
+Then Title, Name, Email, Password, Date of birth kutularini doldur..........skipped
+And Sign up for our newsletter! checkbox secimi yap.........................skipped
+And Receive special offers from our partners! checkbox secimi yap...........skipped
+And First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number kutularini doldur.skipped
+And Create Account button butonunu tikla....................................skipped
+And ACCOUNT CREATED! gorunur oldugunu dogrula...............................skipped
+And Continue butonuna tikla.................................................skipped
+But Logged in as username gorunurlugunu dogrula.............................skipped
+And Delete Account butonuna tikla...........................................skipped
+]]></failure>
+    </testcase>
+</testsuite>
