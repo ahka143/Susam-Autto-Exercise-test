@@ -12,12 +12,10 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepDefinations",
-        tags = "@parametre",
+        tags = "@wip",
         dryRun = false
 
 )
-
 public class TestRunner {
-
 
 }

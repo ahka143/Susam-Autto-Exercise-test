@@ -11,7 +11,7 @@ Feature: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
     Then Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen
     And Closes the page
 
-  @case23
+  @wip
   Scenario: Case 23 Verify address details in checkout page
 
     Given User goes to "autoUrl" website
