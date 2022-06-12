@@ -15,6 +15,8 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.Random;
+
 import static org.openqa.selenium.Keys.*;
 
 public class AutoStepDefinations_Murat {
@@ -23,6 +25,8 @@ public class AutoStepDefinations_Murat {
     AutoExercisePage_Murat autoExercisePage_murat = new AutoExercisePage_Murat();
     Faker faker = new Faker();
     String expectedAddress;
+    String secilenBrand;
+    Random rnd;
 
     @Given("User goes to {string} website")
     public void user_goes_to_website(String url) {
@@ -74,6 +78,7 @@ public class AutoStepDefinations_Murat {
     public void click_signup_login_button() {
         autoExercisePage_murat.signupLogin.click();
     }
+
     @Then("Fill all details in Signup and create account")
     public void fill_all_details_in_signup_and_create_account() {
         actions.click(autoExercisePage_murat.signUpUserName)
@@ -92,7 +97,7 @@ public class AutoStepDefinations_Murat {
         Select selectDays = new Select(autoExercisePage_murat.dropDownDays);
         selectDays.selectByVisibleText("11");
 
-        Select selectMonths= new Select(autoExercisePage_murat.dropDownMonths);
+        Select selectMonths = new Select(autoExercisePage_murat.dropDownMonths);
         selectMonths.selectByVisibleText("November");
 
         Select selectYears = new Select(autoExercisePage_murat.dropDownYears);
@@ -126,16 +131,19 @@ public class AutoStepDefinations_Murat {
 
         autoExercisePage_murat.createAccountButton.click();
     }
+
     @Then("Verify ACCOUNT CREATED! and click Continue button")
     public void verify_account_created_and_click_continue_button() {
         Assert.assertTrue(autoExercisePage_murat.accountCreatedText.isDisplayed());
         autoExercisePage_murat.continueButton.click();
 
     }
+
     @Then("Verify Logged in as username at top")
     public void verify_logged_in_as_username_at_top() {
         Assert.assertTrue(autoExercisePage_murat.loggedinAsUserName.isDisplayed());
     }
+
     @Then("Add products to cart")
     public void add_products_to_cart() {
         for (int i = 0; i < 2; i++) {
@@ -143,21 +151,25 @@ public class AutoStepDefinations_Murat {
         }
 
     }
+
     @Then("Click Cart button")
     public void click_cart_button() {
         JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
         jse.executeScript("arguments[0].click();", autoExercisePage_murat.viewCartButton);
     }
+
     @Then("Verify that cart page is displayed")
     public void verify_that_cart_page_is_displayed() {
         String expectedUrl = "cart";
         String actualUrl = Driver.getDriver().getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(expectedUrl));
     }
+
     @Then("Click Proceed To Checkout")
     public void click_proceed_to_checkout() {
         autoExercisePage_murat.proceedToCheckOut.click();
     }
+
     @Then("Verify that the delivery address is same address filled at the time registration of account")
     public void verify_that_the_delivery_address_is_same_address_filled_at_the_time_registration_of_account() {
         Assert.assertTrue(autoExercisePage_murat.actualDeliveryAddressWE.getText().equals(expectedAddress));
@@ -176,6 +188,43 @@ public class AutoStepDefinations_Murat {
     @Then("Verify ACCOUNT DELETED! and click Continue button")
     public void verify_account_deleted_and_click_continue_button() {
         Assert.assertTrue(autoExercisePage_murat.deleteAaccountText.isDisplayed());
+    }
+
+    @Given("Click on Products button")
+    public void click_on_products_button() {
+        autoExercisePage_murat.productsLink.click();
+    }
+
+    @Given("Verify that Brands are visible on left side bar")
+    public void verify_that_brands_are_visible_on_left_side_bar() {
+        Assert.assertTrue(autoExercisePage_murat.brands.isDisplayed());
+    }
+
+    @Given("Click on any brand name")
+    public void click_on_any_brand_name() {
+        rnd = new Random();
+        int randomBrand = rnd.nextInt(autoExercisePage_murat.brandsList.size());
+        secilenBrand = autoExercisePage_murat.brandsList.get(randomBrand).getText();
+        autoExercisePage_murat.brandsList.get(randomBrand).click();
+
+    }
+
+    @Given("Verify that user is navigated to brand page and brand products are displayed")
+    public void verify_that_user_is_navigated_to_brand_page_and_brand_products_are_displayed() {
+        secilenBrand = secilenBrand.substring(4).toLowerCase();
+        Assert.assertTrue(autoExercisePage_murat.secilenBrandName.getText().toLowerCase().equals(secilenBrand));
+    }
+
+    @Given("On left side bar, click on any other brand link")
+    public void on_left_side_bar_click_on_any_other_brand_link() {
+        int randomSecondBrand = rnd.nextInt(autoExercisePage_murat.brandsList.size());
+        secilenBrand = autoExercisePage_murat.brandsList.get(randomSecondBrand).getText().substring(4).toLowerCase();
+        autoExercisePage_murat.brandsList.get(randomSecondBrand).click();
+    }
+
+    @Given("Verify that user is navigated to that brand page and can see products")
+    public void verify_that_user_is_navigated_to_that_brand_page_and_can_see_products() {
+        Assert.assertTrue(autoExercisePage_murat.secilenBrandName.getText().toLowerCase().equals(secilenBrand));
     }
 
     @And("Closes the page")

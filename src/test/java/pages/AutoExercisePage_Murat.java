@@ -82,4 +82,16 @@ public class AutoExercisePage_Murat {
 
     @FindBy (xpath = "//h1[text()='Delete Account']")
     public WebElement deleteAaccountText;
+
+    @FindBy (xpath = "//*[text()=' Products']")
+    public WebElement productsLink;
+
+    @FindBy (xpath = "//h2[text()='Brands']")
+    public WebElement brands;
+
+    @FindBy (xpath = "//div[@class='brands-name']//li")
+    public List <WebElement> brandsList;
+
+    @FindBy (xpath = "//li[@class='active']")
+    public WebElement secilenBrandName;
 }

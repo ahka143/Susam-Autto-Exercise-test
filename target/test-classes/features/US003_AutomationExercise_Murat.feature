@@ -11,7 +11,7 @@ Feature: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
     Then Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen
     And Closes the page
 
-  @wip
+  @case23
   Scenario: Case 23 Verify address details in checkout page
 
     Given User goes to "autoUrl" website
@@ -29,3 +29,16 @@ Feature: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
     And Click Delete Account button
     And Verify ACCOUNT DELETED! and click Continue button
     And Closes the page
+
+  @wip
+  Scenario: Case 19 View & Cart Brand Products
+
+    Given User goes to "autoUrl" website
+    And Click on Products button
+    And Verify that Brands are visible on left side bar
+    And Click on any brand name
+    And Verify that user is navigated to brand page and brand products are displayed
+    And On left side bar, click on any other brand link
+    And Verify that user is navigated to that brand page and can see products
+    And Closes the page
+

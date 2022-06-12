@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.974">
-    <testcase classname="Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="Case 23 Verify address details in checkout page" time="18.79">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.231">
+    <testcase classname="Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="Case 19 View &amp; Cart Brand Products" time="31.043">
         <system-out>
             <![CDATA[Given User goes to "autoUrl" website........................................passed
-Then Verify that home page is visible successfully..........................passed
-Then Click Signup Login button..............................................passed
-And Fill all details in Signup and create account...........................passed
-And Verify ACCOUNT CREATED! and click Continue button.......................passed
-And Verify Logged in as username at top.....................................passed
-And Add products to cart....................................................passed
-And Click Cart button.......................................................passed
-And Verify that cart page is displayed......................................passed
-And Click Proceed To Checkout...............................................passed
-And Verify that the delivery address is same address filled at the time registration of account.passed
-And Verify that the billing address is same address filled at the time registration of account.passed
-And Click Delete Account button.............................................passed
-And Verify ACCOUNT DELETED! and click Continue button.......................passed
-And Closes the page.........................................................passed
+And Click on Products button................................................passed
+And Verify that Brands are visible on left side bar.........................passed
+And Click on any brand name.................................................passed
+And Verify that user is navigated to brand page and brand products are displayed.passed
+And On left side bar, click on any other brand link.........................passed
+And Verify that user is navigated to that brand page and can see products...passed
 ]]>
         </system-out>
     </testcase>
