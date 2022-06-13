@@ -63,7 +63,7 @@ Feature: AutomationExercise sitesini test eder
     And Verify success message Your order has been placed successfully!
     And Click Delete Account button
     And Verify that ACCOUNT DELETED! is visible
-
+    And Click Continue button
 
 
   @case18

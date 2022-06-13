@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.572">
+    <testcase classname="AutomationExercise sitesini test eder" name="TC14 Place Order: Register while Checkout" time="33.318">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()='Account Created!']&quot;}&#10;  (Session info: MicrosoftEdge=102.0.1245.39)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'LAPTOP-4H3VM8CA', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [40a2321f1323cc86ec6611efaf68cb7f, findElement {using=xpath, value=//*[text()='Account Created!']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:53547}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\sena_\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53547/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 40a2321f1323cc86ec6611efaf68cb7f" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given Launch browser and navigate to url automationexercise.................passed
+And Verify that home page is visible successfully...........................passed
+And Add products to cart....................................................passed
+And Click Cart button.......................................................passed
+And Verify that cart page is displayed......................................passed
+And Click Proceed To Checkout...............................................passed
+And Click Register Login button.............................................passed
+And Fill all details in Signup and create account...........................passed
+And Verify ACCOUNT CREATED! and click Continue button.......................failed
+And Verify Logged in as username at top.....................................skipped
+And Click Cart button.......................................................skipped
+And Click Proceed To Checkout...............................................skipped
+And Verify Address Details and Review Your Order............................skipped
+And Enter description in comment text area and click Place Order............skipped
+And Enter payment details: Name on Card, Card Number, CVC, Expiration date..skipped
+And Click Pay and Confirm Order button......................................skipped
+And Verify success message Your order has been placed successfully!.........skipped
+And Click Delete Account button.............................................skipped
+And Verify that ACCOUNT DELETED! is visible.................................skipped
+And Click Continue button...................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Account Created!']"}
+  (Session info: MicrosoftEdge=102.0.1245.39)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'LAPTOP-4H3VM8CA', ip: '192.168.1.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [40a2321f1323cc86ec6611efaf68cb7f, findElement {using=xpath, value=//*[text()='Account Created!']}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 102.0.1245.39, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:53547}, msedge: {msedgedriverVersion: 102.0.1245.39 (14b303d1f780..., userDataDir: C:\Users\sena_\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53547/devtoo..., se:cdpVersion: 102.0.1245.39, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 40a2321f1323cc86ec6611efaf68cb7f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.isDisplayed(Unknown Source)
+	at stepDefinitions.AutoStepDefinations_Sena.verifyACCOUNTCREATEDAndClickContinueButton(AutoStepDefinations_Sena.java:222)
+	at ✽.Verify ACCOUNT CREATED! and click Continue button(file:///C:/Users/sena_/IdeaProjects/Susam-Autto-Exercise-test/src/test/resources/features/US004_AutomationExercise_Sena.feature:55)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
