@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.231">
-    <testcase classname="Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="Case 19 View &amp; Cart Brand Products" time="31.043">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.163">
+    <testcase classname="Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="Case 3 Login User with incorrect email and password" time="14.973">
         <system-out>
             <![CDATA[Given User goes to "autoUrl" website........................................passed
-And Click on Products button................................................passed
-And Verify that Brands are visible on left side bar.........................passed
-And Click on any brand name.................................................passed
-And Verify that user is navigated to brand page and brand products are displayed.passed
-And On left side bar, click on any other brand link.........................passed
-And Verify that user is navigated to that brand page and can see products...passed
+And Verify that home page is visible successfully...........................passed
+And Click Signup Login button...............................................passed
+And Verify Login to your account is visible.................................passed
+And Enter incorrect email address and password..............................passed
+And Click login button......................................................passed
+And Verify error Your email or password is incorrect! is visible............passed
+And Closes the page.........................................................passed
 ]]>
         </system-out>
     </testcase>

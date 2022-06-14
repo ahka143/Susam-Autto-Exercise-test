@@ -227,6 +227,98 @@ public class AutoStepDefinations_Murat {
         Assert.assertTrue(autoExercisePage_murat.secilenBrandName.getText().toLowerCase().equals(secilenBrand));
     }
 
+    @Given("Verify Address Details and Review Your Order")
+    public void verify_address_details_and_review_your_order() {
+        Assert.assertTrue(autoExercisePage_murat.actualBillingAddressWE.getText().equals(expectedAddress));
+        Assert.assertTrue(autoExercisePage_murat.actualDeliveryAddressWE.getText().equals(expectedAddress));
+    }
+
+    @And("Enter description in comment text area and click Place Order")
+    public void enterDescriptionInCommentTextAreaAndClickPlaceOrder() {
+        ReusableMethods.scroolDown(autoExercisePage_murat.placeOrder);
+        autoExercisePage_murat.placeOrder.click();
+    }
+
+    @Given("Enter payment details: Name on Card, Card Number, CVC, Expiration date")
+    public void enter_payment_details_name_on_card_card_number_cvc_expiration_date() {
+        actions.click(autoExercisePage_murat.nameOnCard)
+                .sendKeys(faker.name().fullName())
+                .sendKeys(TAB)
+                .sendKeys("1234567890123456")
+                .sendKeys(TAB)
+                .sendKeys("121")
+                .sendKeys(TAB)
+                .sendKeys("12")
+                .sendKeys(TAB)
+                .sendKeys("2015")
+                .perform();
+    }
+
+    @Given("Click Pay and Confirm Order button")
+    public void click_pay_and_confirm_order_button() {
+        autoExercisePage_murat.payAndConfirmOrder.click();
+    }
+
+    @Given("Verify success message Your order has been placed successfully!")
+    public void verify_success_message_your_order_has_been_placed_successfully() {
+        ReusableMethods.waitFor(2);
+        Assert.assertTrue(autoExercisePage_murat.orderConfirmed.isDisplayed());
+    }
+
+    @And("Scroll down to footer")
+    public void scrollDownToFooter() {
+        ReusableMethods.scroolDown(autoExercisePage_murat.subscription);
+    }
+
+    @And("Verify text SUBSCRIPTION")
+    public void verifyTextSUBSCRIPTION() {
+        Assert.assertTrue(autoExercisePage_murat.subscription.isDisplayed());
+    }
+
+    @And("Enter email address in input and click arrow button")
+    public void enterEmailAddressInInputAndClickArrowButton() {
+        autoExercisePage_murat.emailAddressInput.sendKeys(faker.internet().emailAddress() + ENTER);
+    }
+
+    @And("Verify success message You have been successfully subscribed! is visible")
+    public void verifySuccessMessageYouHaveBeenSuccessfullySubscribedIsVisible() {
+        Assert.assertTrue(autoExercisePage_murat.successfullySubscried.isDisplayed());
+    }
+
+    @And("Click on Test Cases button")
+    public void clickOnTestCasesButton() {
+        autoExercisePage_murat.testCasesLink.click();
+    }
+
+    @And("Verify user is navigated to test cases page successfully")
+    public void verifyUserIsNavigatedToTestCasesPageSuccessfully() {
+        Assert.assertTrue(autoExercisePage_murat.testCasesText.isDisplayed());
+    }
+
+    @Given("Verify Login to your account is visible")
+    public void verify_login_to_your_account_is_visible() {
+        Assert.assertTrue(autoExercisePage_murat.logintoYourAccount.isDisplayed());
+    }
+
+    @Given("Enter incorrect email address and password")
+    public void enter_incorrect_email_address_and_password() {
+        actions.click(autoExercisePage_murat.emailAddressTextBox)
+                .sendKeys(faker.internet().emailAddress())
+                .sendKeys(TAB)
+                .sendKeys(faker.internet().password())
+                .perform();
+    }
+
+    @Given("Click login button")
+    public void click_login_button() {
+        autoExercisePage_murat.loginButton.click();
+    }
+
+    @Given("Verify error Your email or password is incorrect! is visible")
+    public void verify_error_your_email_or_password_is_incorrect_is_visible() {
+        Assert.assertTrue(autoExercisePage_murat.emailPasswordIncorrectText.isDisplayed());
+    }
+
     @And("Closes the page")
     public void closesThePage() {
         Driver.getDriver().close();

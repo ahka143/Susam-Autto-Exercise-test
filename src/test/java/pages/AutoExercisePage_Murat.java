@@ -94,4 +94,43 @@ public class AutoExercisePage_Murat {
 
     @FindBy (xpath = "//li[@class='active']")
     public WebElement secilenBrandName;
+
+    @FindBy (xpath = "//a[text()='Place Order']")
+    public WebElement placeOrder;
+
+    @FindBy (xpath = "//input[@name='name_on_card']")
+    public WebElement nameOnCard;
+
+    @FindBy (xpath = "//button[text()='Pay and Confirm Order']")
+    public WebElement payAndConfirmOrder;
+
+    @FindBy (xpath = "//*[.='Congratulations! Your order has been confirmed!']")
+    public WebElement orderConfirmed;
+
+    @FindBy (xpath = "//h2[.='Subscription']")
+    public WebElement subscription;
+
+    @FindBy (id="susbscribe_email")
+    public WebElement emailAddressInput;
+
+    @FindBy (xpath = "//*[text()='You have been successfully subscribed!']")
+    public WebElement successfullySubscried;
+
+    @FindBy (xpath = "//a[text()=' Test Cases']")
+    public WebElement testCasesLink;
+
+    @FindBy (xpath = "//*[text()='Test Cases']")
+    public WebElement testCasesText;
+
+    @FindBy (xpath = "//*[.='Login to your account']")
+    public WebElement logintoYourAccount;
+
+    @FindBy (xpath = "//input[@type='email']")
+    public WebElement emailAddressTextBox;
+
+    @FindBy (xpath = "//button[text()='Login']")
+    public WebElement loginButton;
+
+    @FindBy (xpath = "//*[text()='Your email or password is incorrect!']")
+    public WebElement emailPasswordIncorrectText;
 }
