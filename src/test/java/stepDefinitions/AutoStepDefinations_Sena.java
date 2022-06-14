@@ -5,19 +5,18 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AutoExercisePage_Sena;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class AutoStepDefinations_Sena {
 
     AutoExercisePage_Sena page = new AutoExercisePage_Sena();
     Actions actions = new Actions(Driver.getDriver());
     Faker faker = new Faker();
-    JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
 
     @Then("Launch browser and navigate to url automationexercise")
     public void launchBrowserAndNavigateToUrl() {
@@ -52,6 +51,7 @@ public class AutoStepDefinations_Sena {
     public void click_login_button() {
         page.loginButton.click();
     }
+
     @Given("Verify that Logged in as username is visible")
     public void verify_that_logged_in_as_username_is_visible() {
         Assert.assertTrue(page.userNameElement.isDisplayed());
@@ -132,7 +132,7 @@ public class AutoStepDefinations_Sena {
 
     @Given("Scroll down to footer")
     public void scroll_down_to_footer() {
-        jse.executeScript("arguments[0].click();", page.subscriptionTitle);
+        ReusableMethods.scrollIntoView(page.subscriptionTitle);
 
     }
 
@@ -276,5 +276,66 @@ public class AutoStepDefinations_Sena {
     @And("Click Continue button")
     public void clickContinueButton() {
         page.continueButton.click();
+    }
+
+    @And("Verify that categories are visible on left side bar")
+    public void verifyThatCategoriesAreVisibleOnLeftSideBar() {
+        page.categoryList.forEach(t-> Assert.assertTrue(t.isDisplayed()));
+    }
+
+    @And("Click on Women category")
+    public void clickOnWomenCategory() {
+        page.womenCategoryButton.click();
+    }
+
+    @And("Click on any category link under Women category, for example: Tops")
+    public void clickOnAnyCategoryLinkUnderWomenCategoryForExampleDress() {
+        ReusableMethods.waitForVisibility(page.womenCategoryLinks.get(0),10);
+        page.womenCategoryLinks.get(1).click();
+    }
+
+    @And("Verify that category page is displayed and confirm text")
+    public void verifyThatCategoryPageIsDisplayedAndConfirmTextWOMENTOPSPRODUCTS() {
+        String expectedTitle = ConfigReader.getProperty("expectedWomenCategoryTitle");
+        String actualTitle = page.categoryTitle.getText();
+        Assert.assertEquals(expectedTitle, actualTitle);
+    }
+
+    @And("On left side bar, click on any sub-category link of Men category")
+    public void onLeftSideBarClickOnAnySubCategoryLinkOfMenCategory() {
+        page.menCategoryButton.click();
+        page.menCategoryLinks.get(0).click();
+    }
+
+    @And("Verify that user is navigated to that category page")
+    public void verifyThatUserIsNavigatedToThatCategoryPage() {
+        String expectedText = "MEN";
+        String title = page.categoryTitle.getText();
+        Assert.assertTrue(title.contains(expectedText));
+    }
+
+    @And("Scroll to bottom of page")
+    public void scrollToBottomOfPage() {
+        ReusableMethods.scrollIntoView(page.recommendedItemsTitle);
+    }
+
+    @And("Verify RECOMMENDED ITEMS are visible")
+    public void verifyRECOMMENDEDITEMSAreVisible() {
+        Assert.assertTrue(page.recommendedItemsTitle.isDisplayed());
+    }
+
+    @And("Click on Add To Cart on Recommended product")
+    public void clickOnAddToCartOnRecommendedProduct() {
+        page.recommendedItemAddToCart.click();
+    }
+
+    @And("Click on View Cart button")
+    public void clickOnViewCartButton() {
+        page.viewCartLink.click();
+    }
+
+    @And("Verify that product is displayed in cart page")
+    public void verifyThatProductIsDisplayedInCartPage() {
+        Assert.assertTrue(page.productInCart.isDisplayed());
     }
 }

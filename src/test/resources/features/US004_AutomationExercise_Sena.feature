@@ -42,7 +42,7 @@ Feature: AutomationExercise sitesini test eder
 
 
 
-  @case14 @wip
+  @case14
   Scenario: TC14 Place Order: Register while Checkout
     Given Launch browser and navigate to url automationexercise
     And Verify that home page is visible successfully
@@ -70,10 +70,10 @@ Feature: AutomationExercise sitesini test eder
   Scenario: TC18 View Category Products
     Given Launch browser and navigate to url automationexercise
     And Verify that categories are visible on left side bar
-    And Click on 'Women' category
-    And Click on any category link under 'Women' category, for example: Dress
-    And Verify that category page is displayed and confirm text 'WOMEN - TOPS PRODUCTS'
-    And On left side bar, click on any sub-category link of 'Men' category
+    And Click on Women category
+    And Click on any category link under Women category, for example: Tops
+    And Verify that category page is displayed and confirm text
+    And On left side bar, click on any sub-category link of Men category
     And Verify that user is navigated to that category page
 
 
@@ -81,7 +81,7 @@ Feature: AutomationExercise sitesini test eder
   Scenario: TC22 Add to cart from Recommended items
     Given Launch browser and navigate to url automationexercise
     And Scroll to bottom of page
-    And Verify 'RECOMMENDED ITEMS' are visible
-    And Click on 'Add To Cart' on Recommended product
-    And Click on 'View Cart' button
+    And Verify RECOMMENDED ITEMS are visible
+    And Click on Add To Cart on Recommended product
+    And Click on View Cart button
     And Verify that product is displayed in cart page

@@ -125,4 +125,34 @@ public class AutoExercisePage_Sena {
 
     @FindBy(xpath = "//*[text()='Delete']")
     public WebElement deleteButton;
+
+    @FindBy(xpath = "//div[@class='panel panel-default']")
+    public List<WebElement> categoryList;
+
+    @FindBy(xpath = "//a[@href='#Women']")
+    public WebElement womenCategoryButton;
+
+    @FindBy(xpath = "//div[@id='Women']//li//a")
+    public List<WebElement> womenCategoryLinks;
+
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    public WebElement categoryTitle;
+
+    @FindBy(xpath = "//a[@href='#Men']")
+    public WebElement menCategoryButton;
+
+    @FindBy(xpath = "//div[@id='Men']//li//a")
+    public List<WebElement> menCategoryLinks;
+
+    @FindBy(xpath = "//*[text()='recommended items']")
+    public WebElement recommendedItemsTitle;
+
+    @FindBy(xpath = "//div[@id='recommended-item-carousel']//div[@class='item active']//a")
+    public WebElement recommendedItemAddToCart;
+
+    @FindBy(xpath = "//*[text()='View Cart']")
+    public WebElement viewCartLink;
+
+    @FindBy(xpath = "//tr[@id='product-1']")
+    public WebElement productInCart;
 }
