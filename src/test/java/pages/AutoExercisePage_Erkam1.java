@@ -5,9 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class AutoExercisePage_Erkam {
+import java.util.List;
 
-    public AutoExercisePage_Erkam(){
+
+public class AutoExercisePage_Erkam1 {
+
+    public AutoExercisePage_Erkam1(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy (xpath="(//button[@class='btn btn-success'])[1]")
@@ -81,8 +84,32 @@ public class AutoExercisePage_Erkam {
     public WebElement logged;
     @FindBy (xpath="//a[@href='/delete_account']")
     public WebElement delete;
+    @FindBy (xpath="//button[@data-toggle='modal']")
+    public WebElement deleteButton;
+    @FindBy (xpath="//a[@style='color:brown;'][1]")
+    public WebElement logout;
 
+////////////////////////////////////////////////////////
+    @FindBy(xpath="//h2[.='New User Signup!']")
+    public WebElement newUserSignup;
+    @FindBy(xpath="//p[@style='color: red;']")
+    public WebElement alreadyExist;
+///////////////////////////////////////////////////////
+    @FindBy(xpath =" //i[@style='font-size: 16px;']")
+    public WebElement product;
 
+    @FindBy (xpath ="//div[@class='features_items']")
+    public WebElement allproductpage;
 
+    @FindBy (xpath="//input[@id='search_product']")
+    public WebElement searchProduct;
 
+    @FindBy (xpath="//i[@class='fa fa-search']")
+    public WebElement searchclick;
+
+    @FindBy (xpath="//h2[@class='title text-center']")
+    public WebElement searchedproducts;
+
+    @FindBy(xpath="//div[@class='productinfo text-center']")
+   public List<WebElement> urunlist;
 }
