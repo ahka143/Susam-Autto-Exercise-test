@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>15 Jun 2022, 12:49</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.accountCREATEDYazisininGoruntulendiginiTestEderVeContinueButonunaTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="3351299700">3.351</td>
+              <td class="duration" data-value="3351299700">3.351</td>
+              <td class="duration" data-value="3351299700">3.351</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.aciklamaAlaninaBilgiGirerVeSiparisVeriTiklar()</td>
+              <td>2</td>
+              <td class="duration" data-value="979664550">0.979</td>
+              <td class="duration" data-value="979664550">0.984</td>
+              <td class="duration" data-value="1959329100">1.959</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.alisveriseDevamEtButonunuTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="304757900">0.304</td>
+              <td class="duration" data-value="304757900">0.304</td>
+              <td class="duration" data-value="304757900">0.304</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.allProductSayfasinaGidildiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="7064050">0.007</td>
+              <td class="duration" data-value="7064050">0.008</td>
+              <td class="duration" data-value="14128100">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.anasayfanin_gorunur_oldugunu_test_eder()</td>
+              <td>6</td>
+              <td class="duration" data-value="35129800">0.035</td>
+              <td class="duration" data-value="35129800">0.042</td>
+              <td class="duration" data-value="210778800">0.210</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.aramaKutusunaUrunAdiniYazarVeAraDugmesineTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1104477900">1.104</td>
+              <td class="duration" data-value="1104477900">1.104</td>
+              <td class="duration" data-value="1104477900">1.104</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.arananUrunlerinGoruntulendiginiTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="27042900">0.027</td>
+              <td class="duration" data-value="27042900">0.027</td>
+              <td class="duration" data-value="27042900">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.birOncekiSayfayaGider()</td>
+              <td>1</td>
+              <td class="duration" data-value="1320207400">1.320</td>
+              <td class="duration" data-value="1320207400">1.320</td>
+              <td class="duration" data-value="1320207400">1.320</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.continueButtonTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="3325751800">3.325</td>
+              <td class="duration" data-value="3325751800">3.325</td>
+              <td class="duration" data-value="3325751800">3.325</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.downloadInvoiceButonunaTiklarVeInvoiceDosyasininIndiginiTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="850690900">0.850</td>
+              <td class="duration" data-value="850690900">0.850</td>
+              <td class="duration" data-value="850690900">0.850</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.gecerli_email_adresini_ve_passwordu_girer()</td>
+              <td>3</td>
+              <td class="duration" data-value="333935466">0.333</td>
+              <td class="duration" data-value="333935466">0.410</td>
+              <td class="duration" data-value="1001806400">1.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.ikiUrununDeSepeteEklendiginiTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="62007200">0.062</td>
+              <td class="duration" data-value="62007200">0.062</td>
+              <td class="duration" data-value="62007200">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.ikinci&Uuml;r&uuml;n&uuml;n&Uuml;zerineGelirVeSepeteEkleYiTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="269795500">0.269</td>
+              <td class="duration" data-value="269795500">0.269</td>
+              <td class="duration" data-value="269795500">0.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.ilkUrundekiViewProductButonunuTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1004134300">1.004</td>
+              <td class="duration" data-value="1004134300">1.004</td>
+              <td class="duration" data-value="1004134300">1.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.i&#775;lk&Uuml;r&uuml;n&uuml;n&Uuml;zerineGelirVeSepeteEkleYiTiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="210923266">0.210</td>
+              <td class="duration" data-value="210923266">0.279</td>
+              <td class="duration" data-value="632769800">0.632</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.krediKartiBilgileriniGirerVeSiparisiTamamlaVeOdeYiTiklar()</td>
+              <td>2</td>
+              <td class="duration" data-value="5375249100">5.375</td>
+              <td class="duration" data-value="5375249100">5.732</td>
+              <td class="duration" data-value="10750498200">10.750</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.kullanici_sayfasina_gider(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="7953839316">7.953</td>
+              <td class="duration" data-value="7953839316">10.976</td>
+              <td class="duration" data-value="47723035900">47.723</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.kullanicinin_login_sayfasina_geldigini_test_eder()</td>
+              <td>1</td>
+              <td class="duration" data-value="33110200">0.033</td>
+              <td class="duration" data-value="33110200">0.033</td>
+              <td class="duration" data-value="33110200">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.log_out_butonuna_tiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1310143400">1.310</td>
+              <td class="duration" data-value="1310143400">1.310</td>
+              <td class="duration" data-value="1310143400">1.310</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.login_butonuna_tiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="3011793100">3.011</td>
+              <td class="duration" data-value="3011793100">3.900</td>
+              <td class="duration" data-value="9035379300">9.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.proceedToCheckoutButonunaTiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="516207600">0.516</td>
+              <td class="duration" data-value="516207600">0.753</td>
+              <td class="duration" data-value="1548622800">1.548</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.productButonunaTiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="4720954500">4.720</td>
+              <td class="duration" data-value="4720954500">5.832</td>
+              <td class="duration" data-value="14162863500">14.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.registerLoginButonunaTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1125599200">1.125</td>
+              <td class="duration" data-value="1125599200">1.125</td>
+              <td class="duration" data-value="1125599200">1.125</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sayfayiKapatir()</td>
+              <td>6</td>
+              <td class="duration" data-value="1568969900">1.568</td>
+              <td class="duration" data-value="1568969900">4.168</td>
+              <td class="duration" data-value="9413819400">9.413</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.searchedPRODUCTSYazisininGorundugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="34769000">0.034</td>
+              <td class="duration" data-value="34769000">0.034</td>
+              <td class="duration" data-value="34769000">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sepetButonunuTiklarVeUrununSepetteOldugunuTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="818052050">0.818</td>
+              <td class="duration" data-value="818052050">0.831</td>
+              <td class="duration" data-value="1636104100">1.636</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sepetSayfasindaOldugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="33702200">0.033</td>
+              <td class="duration" data-value="33702200">0.033</td>
+              <td class="duration" data-value="33702200">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sepetSayfasininGoruntulendiginiTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="33791900">0.033</td>
+              <td class="duration" data-value="33791900">0.033</td>
+              <td class="duration" data-value="33791900">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sepetiGoruntuleyiTiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="1345257700">1.345</td>
+              <td class="duration" data-value="1345257700">1.685</td>
+              <td class="duration" data-value="4035773100">4.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sepetiGoruntuleyiTiklarVeUrununSepetteOldugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="2086079800">2.086</td>
+              <td class="duration" data-value="2086079800">2.086</td>
+              <td class="duration" data-value="2086079800">2.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.sign_up_login_butonuna_tiklar()</td>
+              <td>3</td>
+              <td class="duration" data-value="1288640500">1.288</td>
+              <td class="duration" data-value="1288640500">1.477</td>
+              <td class="duration" data-value="3865921500">3.865</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.siparisAdresininGoruntulendiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="25727600">0.025</td>
+              <td class="duration" data-value="25727600">0.027</td>
+              <td class="duration" data-value="51455200">0.051</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.textinin_gorunur_olugunu_test_eder(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="35050233">0.035</td>
+              <td class="duration" data-value="35050233">0.038</td>
+              <td class="duration" data-value="105150700">0.105</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.urunListesininGoruntulendiginiTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="41946800">0.041</td>
+              <td class="duration" data-value="41946800">0.041</td>
+              <td class="duration" data-value="41946800">0.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.urunlerinFiyatlar&#305;n&#305;Miktar&#305;n&#305;VeToplamFiyat&#305;n&#305;Dogrular()</td>
+              <td>1</td>
+              <td class="duration" data-value="298456000">0.298</td>
+              <td class="duration" data-value="298456000">0.298</td>
+              <td class="duration" data-value="298456000">0.298</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.urunuSepeteEkler()</td>
+              <td>1</td>
+              <td class="duration" data-value="244226000">0.244</td>
+              <td class="duration" data-value="244226000">0.244</td>
+              <td class="duration" data-value="244226000">0.244</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.yazisinin_gorunur_oldugunu_test_eder(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="36902700">0.036</td>
+              <td class="duration" data-value="36902700">0.036</td>
+              <td class="duration" data-value="36902700">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.yeniKullaniciOlusturur()</td>
+              <td>1</td>
+              <td class="duration" data-value="4864986000">4.864</td>
+              <td class="duration" data-value="4864986000">4.864</td>
+              <td class="duration" data-value="4864986000">4.864</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.yourOrderHasBeenPlacedSuccessfullyYazsininGoruntulendiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="136018600">0.136</td>
+              <td class="duration" data-value="136018600">0.233</td>
+              <td class="duration" data-value="272037200">0.272</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinations.AutoStepDefinations_Ahmet.&uuml;r&uuml;nAd&#305;KategoriFiyatBulunabilirlikDurumVeMarkaninGorunurOldugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="375888000">0.375</td>
+              <td class="duration" data-value="375888000">0.375</td>
+              <td class="duration" data-value="375888000">0.375</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>40</td>
+            <td>77</td>
+            <td class="duration">1.669</td>
+            <td class="duration">47.723</td>
+            <td class="duration">2:8.559</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
