@@ -38,6 +38,35 @@ Scenario: TC03 Search Product
   But Enter product name in search input and click search button
   Then Verify SEARCHED PRODUCTS is visible
   And Verify all the products related to search are visible
+#duzenle sonuncuyu
 
+  Scenario: Verify Product quantity in Cart
+    And Click View Product for any product on home page
+    And Verify product detail is opened
+    Then Increase quantity to 4
+    And Click Add to cart button
+    Then Click View Cart button
+    But Verify that product is displayed in cart page with exact quantity
+
+
+  Scenario: Remove Products From Cart
+    Then  Add products to cart
+    And Click Cart button
+    Given Verify that cart page is displayed
+    But  Click X button corresponding to particular product
+#    And Verify that product is removed from the cart
+
+  Scenario: Add review on product
+    But click the product button
+    And  Verify user is navigated to ALL PRODUCTS page successfully
+    Then Click on View Product button
+    And Verify Write Your Review is visible
+    But Enter name, email and review
+    Given Click Submit button
+#    And Verify success message Thank you for your review.
+Scenario: Verify Scroll Up using Arrow button and Scroll Down functionality
+  And  Scroll down page to bottom
+  And Verify SUBSCRIPTION is visible
+  Then Click on arrow at bottom right side to move upward
 
 

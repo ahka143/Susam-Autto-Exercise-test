@@ -5,11 +5,14 @@ import io.cucumber.java.en.But;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import pages.AutoExercisePage_Erkam1;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.Set;
 
@@ -137,7 +140,8 @@ public class AutoStepDefinations_Erkam1 {
     public void logout() {
         autoExercisePage.logout.click();
     }
-/////////////////////////////////////////////////////////////////
+
+    /////////////////////////////////////////////////////////////////
     @And("click on Products button")
     public void clickOnProductsButton() {
         autoExercisePage.product.click();
@@ -150,9 +154,10 @@ public class AutoStepDefinations_Erkam1 {
 
     @But("Enter product name in search input and click search button")
     public void enterProductNameInSearchInputAndClickSearchButton() {
-autoExercisePage.searchProduct.sendKeys("Tshirt");
-autoExercisePage.searchclick.click();
+        autoExercisePage.searchProduct.sendKeys("Tshirt");
+        autoExercisePage.searchclick.click();
     }
+
     @Then("Verify SEARCHED PRODUCTS is visible")
     public void verifySEARCHEDPRODUCTSIsVisible() {
         Assert.assertTrue(autoExercisePage.searchProduct.isDisplayed());
@@ -160,8 +165,141 @@ autoExercisePage.searchclick.click();
 
     @And("Verify all the products related to search are visible")
     public void verifyAllTheProductsRelatedToSearchAreVisible() {
-        for (WebElement each: autoExercisePage.urunlist) {
+        for (WebElement each : autoExercisePage.urunlist) {
             Assert.assertTrue(each.isDisplayed());
         }
+    }
+
+
+    /////////////////////////////////////////////////////////
+
+    @And("Click View Product for any product on home page")
+    public void clickViewProductForAnyProductOnHomePage() {
+        autoExercisePage.viewProduct.click();
+    }
+
+    @And("Verify product detail is opened")
+    public void verifyProductDetailIsOpened() {
+        Assert.assertTrue(autoExercisePage.detail.isEnabled());
+    }
+
+    @Then("Increase quantity to {int}")
+    public void increaseQuantityTo(int a) {
+        Actions action = new Actions(Driver.getDriver());
+        action.moveToElement(autoExercisePage.quantity)
+                .click()
+                .sendKeys(Keys.BACK_SPACE)
+                .sendKeys("4")
+                .perform();
+//                .sendKeys(Keys.ARROW_UP)
+//                .sendKeys(Keys.ARROW_UP)
+//                .sendKeys(Keys.ARROW_UP)
+//                .perform();
+    }
+
+    @And("Click Add to cart button")
+    public void clickAddToCartButton() {
+        autoExercisePage.addcart.click();
+    }
+
+    @Then("Click View Cart button")
+    public void clickViewCartButton() {
+        autoExercisePage.viewCart.click();
+    }
+
+    @But("Verify that product is displayed in cart page with exact quantity")
+    public void verifyThatProductIsDisplayedInCartPageWithExactQuantity() {
+        String expectedQuantity = "4";
+        String actualQuantity = autoExercisePage.quantitySon.getText();
+        Assert.assertEquals(expectedQuantity, actualQuantity);
+    }
+
+    ////////////////////////////////////////////////////////////////
+    @Then("Add products to cart")
+    public void addProductsToCart() {
+        Actions action = new Actions(Driver.getDriver());
+        action.moveToElement(autoExercisePage.urun1).click().perform();
+        //autoExercisePage.urun1.click();
+        autoExercisePage.continues.click();
+        action.moveToElement(autoExercisePage.urun2).click().perform();
+        // autoExercisePage.urun2.click();
+        autoExercisePage.continues.click();
+    }
+
+
+    @And("Click Cart button")
+    public void clickCartButton() {
+        autoExercisePage.cart.click();
+    }
+
+    @Given("Verify that cart page is displayed")
+    public void verifyThatCartPageIsDisplayed() {
+        Assert.assertTrue(autoExercisePage.cartpage.isDisplayed());
+    }
+
+    @But("Click X button corresponding to particular product")
+    public void clickXButtonCorrespondingToParticularProduct() {
+        autoExercisePage.X.click();
+    }
+
+    @And("Verify that product is removed from the cart")
+    public void verifyThatProductIsRemovedFromTheCart() {
+    }
+
+    //////////////////////////////////////////////////////////
+    @But("click the product button")
+    public void clickTheProductButton() {
+        autoExercisePage.product.click();
+    }
+
+    @Then("Click on View Product button")
+    public void clickOnViewProductButton() {
+        autoExercisePage.viewProduct.click();
+    }
+
+    @And("Verify Write Your Review is visible")
+    public void verifyWriteYourReviewIsVisible() {
+        Assert.assertTrue(autoExercisePage.write.isDisplayed());
+    }
+
+
+    @But("Enter name, email and review")
+    public void enterNameEmailAndReview() {
+        autoExercisePage.textArea.sendKeys("berbat!");
+        autoExercisePage.sonemail.sendKeys("dccc@dd");
+        autoExercisePage.yourname.sendKeys("ccccd");
+    }
+
+    @Given("Click Submit button")
+    public void clickSubmitButton() {
+        autoExercisePage.submit.click();
+    }
+
+    @And("Verify success message Thank you for your review.")
+    public void verifySuccessMessageThankYouForYourReview() {
+
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    @And("Scroll down page to bottom")
+    public void scrollDownPageToBottom() {
+        ReusableMethods.scroolDown(autoExercisePage.subscription);
+
+    }
+
+    @And("Verify SUBSCRIPTION is visible")
+    public void verifySUBSCRIPTIONIsVisible() {
+        Assert.assertTrue(autoExercisePage.subscription.isDisplayed());
+    }
+
+    @Then("Click on arrow at bottom right side to move upward")
+    public void clickOnArrowAtBottomRightSideToMoveUpward() {
+        autoExercisePage.sagOk.click();
+    }
+
+
+    @And("Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen")
+    public void verifyThatPageIsScrolledUpAndFullFledgedPracticeWebsiteForAutomationEngineersTextIsVisibleOnScreen() {
+
     }
 }

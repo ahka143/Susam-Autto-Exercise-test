@@ -112,4 +112,60 @@ public class AutoExercisePage_Erkam1 {
 
     @FindBy(xpath="//div[@class='productinfo text-center']")
    public List<WebElement> urunlist;
+
+    @FindBy(xpath="(//a[@style='color: brown;'])[3]")
+    public WebElement viewProduct;
+
+    @FindBy (xpath="//div[@class='product-information']")
+    public WebElement detail;
+
+    @FindBy (xpath="//input[@type='number']")
+    public WebElement quantity;
+
+    @FindBy (xpath="//button[@class='btn btn-default cart']")
+    public WebElement addcart;
+
+    @FindBy (xpath="//*[text()='View Cart']")
+    public WebElement viewCart;
+
+    @FindBy(xpath="//button[@class='disabled']")
+    public WebElement quantitySon;
+
+    @FindBy (xpath="(//a[@class='btn btn-default add-to-cart'])[1]")
+    public WebElement urun1;
+    @FindBy (xpath="(//a[@class='btn btn-default add-to-cart'])[3]")
+    public WebElement urun2;
+    @FindBy (xpath = "//button[@data-dismiss='modal']")
+    public WebElement continues;
+
+    @FindBy (xpath="//a[@href='/view_cart']")
+    public WebElement cart;
+
+    @FindBy (xpath="//div[@class='container']")
+    public WebElement cartpage;
+
+    @FindBy (xpath="//i[@class='fa fa-times']")
+    public WebElement X;
+
+@FindBy (xpath="//*[text()='Write Your Review']")
+    public WebElement write;
+
+    @FindBy (xpath="//textarea[@name='review']")
+    public WebElement textArea;
+
+    @FindBy (xpath="//input[@type='text']")
+    public WebElement yourname;
+
+    @FindBy (xpath="//input[@type='email']")
+    public WebElement sonemail;
+
+    @FindBy (xpath="//button[@type='submit']")
+    public WebElement submit;
+    @FindBy (xpath="//*[text()='Subscription']")
+    public WebElement subscription;
+
+    @FindBy (xpath="//i[@class='fa fa-angle-up']")
+    public WebElement sagOk;
+
+
 }
