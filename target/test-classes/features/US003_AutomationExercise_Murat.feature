@@ -1,6 +1,6 @@
 Feature: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
 
-  @case26
+  @case26 @test
   Scenario: Case 26 Kullanici automationExercise websitesine gider ve scrool down fonksiyonu test eder
 
     Given User goes to "autoUrl" website
@@ -82,7 +82,7 @@ Feature: Verify Scroll Up without 'Arrow' button and Scroll Down functionality
     And Verify user is navigated to test cases page successfully
     And Closes the page
 
-  @wip
+  @case3
   Scenario: Case 3 Login User with incorrect email and password
     Given User goes to "autoUrl" website
     And Verify that home page is visible successfully

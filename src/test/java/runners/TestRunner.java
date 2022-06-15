@@ -11,13 +11,8 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml"
         },
         features = "src/test/resources/features",
-<<<<<<< HEAD
         glue = "stepDefinitions",
-        tags = "@case2",
-=======
-        glue = "stepDefinations",
-        tags = "@wip",
->>>>>>> c9a7a49d0d5e71f63fc1dd624f515c4a8a4f86d2
+        tags = "@test",
         dryRun = false
 )
 public class TestRunner {

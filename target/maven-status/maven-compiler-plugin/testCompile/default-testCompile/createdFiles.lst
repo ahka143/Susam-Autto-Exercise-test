@@ -5,8 +5,13 @@ pages\AutoExercisePage_Erkam.class
 runners\TestRunner.class
 stepDefinations\AutoStepDefinations_Murat.class
 utilities\Driver.class
+<<<<<<< HEAD
 stepDefinations\AutoStepDefinations_Erkam.class
 pages\AutoExercisePage_Sena.class
+=======
+pages\AutoExercisePage_Sena.class
+stepDefinations\AutoStepDefinations_Erkam1.class
+>>>>>>> f6f669f86a886b42056c80cc493f62c88cceaa97
 utilities\ConfigReader.class
 stepDefinations\AutoStepDefinations_Ahmet.class
 pages\AutoExercisePage_Ahmet.class

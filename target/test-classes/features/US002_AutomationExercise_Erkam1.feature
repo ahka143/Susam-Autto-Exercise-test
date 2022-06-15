@@ -31,7 +31,7 @@ Feature: US002 kullanici AutomationExercise sitesini test eder
     But Click Signup button
     Then  Verify error Email Address already exist! is visible
 
-  @test
+
   Scenario: TC03 Search Product
     And click on Products button
     And Verify user is navigated to ALL PRODUCTS page successfully

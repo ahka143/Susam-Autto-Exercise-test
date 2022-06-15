@@ -1,6 +1,6 @@
 Feature: AutomationExercise sitesini test eder
 
-  @case2
+  @case2 @test
   Scenario: TC02 Login User with correct email and password
     When Launch browser and navigate to url automationexercise
     Then Verify that home page is visible successfully
