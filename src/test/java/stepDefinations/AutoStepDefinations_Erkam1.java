@@ -238,12 +238,15 @@ public class AutoStepDefinations_Erkam1 {
     }
 
     @But("Click X button corresponding to particular product")
-    public void clickXButtonCorrespondingToParticularProduct() {
+    public void clickXButtonCorrespondingToParticularProduct() throws InterruptedException {
         autoExercisePage.X.click();
+        Thread.sleep(1000);
     }
 
     @And("Verify that product is removed from the cart")
     public void verifyThatProductIsRemovedFromTheCart() {
+       // Assert.assertTrue(autoExercisePage.maviTsorthList.isEmpty());
+        Assert.assertEquals(0,autoExercisePage.maviTsorthList.size());
     }
 
     //////////////////////////////////////////////////////////
@@ -277,6 +280,7 @@ public class AutoStepDefinations_Erkam1 {
 
     @And("Verify success message Thank you for your review.")
     public void verifySuccessMessageThankYouForYourReview() {
+        Assert.assertTrue(autoExercisePage.tesekkurText.isDisplayed());
 
     }
 
@@ -300,6 +304,7 @@ public class AutoStepDefinations_Erkam1 {
 
     @And("Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen")
     public void verifyThatPageIsScrolledUpAndFullFledgedPracticeWebsiteForAutomationEngineersTextIsVisibleOnScreen() {
-
+Assert.assertTrue(autoExercisePage.fullText.isDisplayed());
     }
+
 }

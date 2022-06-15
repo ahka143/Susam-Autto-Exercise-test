@@ -54,7 +54,7 @@ Feature: US002 kullanici AutomationExercise sitesini test eder
     And Click Cart button
     Given Verify that cart page is displayed
     But  Click X button corresponding to particular product
-#    And Verify that product is removed from the cart
+    And Verify that product is removed from the cart
 
   Scenario: Add review on product
     But click the product button
@@ -63,11 +63,13 @@ Feature: US002 kullanici AutomationExercise sitesini test eder
     And Verify Write Your Review is visible
     But Enter name, email and review
     Given Click Submit button
-#    And Verify success message Thank you for your review.
+    And Verify success message Thank you for your review.
+
+
   Scenario: Verify Scroll Up using Arrow button and Scroll Down functionality
     And  Scroll down page to bottom
     And Verify SUBSCRIPTION is visible
     Then Click on arrow at bottom right side to move upward
-#  And Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen
+    And Verify that page is scrolled up and Full-Fledged practice website for Automation Engineers text is visible on screen
 
 

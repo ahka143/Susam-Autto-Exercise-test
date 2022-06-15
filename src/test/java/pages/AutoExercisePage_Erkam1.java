@@ -144,7 +144,7 @@ public class AutoExercisePage_Erkam1 {
     @FindBy (xpath="//div[@class='container']")
     public WebElement cartpage;
 
-    @FindBy (xpath="//i[@class='fa fa-times']")
+    @FindBy (xpath="(//i[@class='fa fa-times'])[1]")
     public WebElement X;
 
 @FindBy (xpath="//*[text()='Write Your Review']")
@@ -166,6 +166,16 @@ public class AutoExercisePage_Erkam1 {
 
     @FindBy (xpath="//i[@class='fa fa-angle-up']")
     public WebElement sagOk;
+
+    @FindBy (xpath="//*[text()='Blue Top']")
+    public List<WebElement> maviTsorthList;
+
+    @FindBy (xpath="//*[text()='Thank you for your review.']")
+    public WebElement tesekkurText;
+
+    @FindBy(xpath="//*[text()='Full-Fledged practice website for Automation Engineers']")
+    public WebElement fullText;
+
 
 
 }
