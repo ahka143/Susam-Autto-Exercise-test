@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="48.786">
-    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli" time="27.83">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="129.048">
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC01 kullanici user emaili ve passwordu ile giris yapabilmeli ve  logout olabilmeli" time="15.727">
         <system-out>
             <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
 And anasayfanin gorunur oldugunu test eder..................................passed
@@ -15,7 +15,7 @@ Then sayfayi kapatir........................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC02 kullanici tum urunleri ve ozelliklerini goruntuluyebilmeli" time="20.711">
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC02 kullanici tum urunleri ve ozelliklerini goruntuluyebilmeli" time="18.572">
         <system-out>
             <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
 And anasayfanin gorunur oldugunu test eder..................................passed
@@ -24,6 +24,85 @@ And All product sayfasina gidildigini test eder.............................pass
 And urun listesinin goruntulendigini test eder..............................passed
 And ilk urundeki View Product butonunu tiklar...............................passed
 And ürün adı, kategori, fiyat, bulunabilirlik, durum ve markanin gorunur oldugunu test eder.passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC03 kullanici urunleri sepete atabilmeli" time="18.026">
+        <system-out>
+            <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
+And anasayfanin gorunur oldugunu test eder..................................passed
+And Product butonuna tiklar.................................................passed
+And İlk ürünün üzerine gelir ve sepete ekle'yi tiklar.......................passed
+And alisverise devam et butonunu tiklar.....................................passed
+And ikinci ürünün üzerine gelir ve sepete ekle'yi tiklar....................passed
+And sepeti goruntuleyi tiklar...............................................passed
+And iki urunun de sepete eklendigini test eder..............................passed
+And urunlerin fiyatlarını, miktarını ve toplam fiyatını dogrular............passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC04 kullanici siparis verip hesabini silebilmeli" time="22.896">
+        <system-out>
+            <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
+And anasayfanin gorunur oldugunu test eder..................................passed
+And SignUp-Login butonuna tiklar............................................passed
+And gecerli email adresini ve passwordu girer...............................passed
+And login butonuna tiklar...................................................passed
+And 'Logged in as username' textinin gorunur olugunu test eder..............passed
+And İlk ürünün üzerine gelir ve sepete ekle'yi tiklar.......................passed
+And sepeti goruntuleyi tiklar...............................................passed
+And sepet sayfasinin goruntulendigini test eder.............................passed
+And proceed to checkout butonuna tiklar.....................................passed
+And siparis adresinin goruntulendigini test eder............................passed
+And aciklama alanina bilgi girer ve siparis veri tiklar.....................passed
+And kredi karti bilgilerini girer ve siparisi tamamla ve ode'yi tiklar......passed
+And Your order has been placed successfully! yazsinin goruntulendigini test eder.passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC05" time="21.418">
+        <system-out>
+            <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
+And anasayfanin gorunur oldugunu test eder..................................passed
+And Product butonuna tiklar.................................................passed
+And All product sayfasina gidildigini test eder.............................passed
+And arama kutusuna urun adini yazar ve ara dugmesine tiklar.................passed
+And SEARCHED PRODUCTS yazisinin gorundugunu test eder.......................passed
+And aranan urunlerin goruntulendigini test eder.............................passed
+And urunu sepete ekler......................................................passed
+And sepeti goruntuleyi tiklar ve urunun sepette oldugunu test eder..........passed
+And SignUp-Login butonuna tiklar............................................passed
+And gecerli email adresini ve passwordu girer...............................passed
+And login butonuna tiklar...................................................passed
+And sepet butonunu tiklar ve urunun sepette oldugunu test eder..............passed
+Then sayfayi kapatir........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US001 kullanici AutomationExercise sitesini test eder" name="TC06 kullanici satin alma isleminden sonra faturayi indirebilmeli" time="31.955">
+        <system-out>
+            <![CDATA[Given kullanici "autoUrl" sayfasina gider...................................passed
+And anasayfanin gorunur oldugunu test eder..................................passed
+And İlk ürünün üzerine gelir ve sepete ekle'yi tiklar.......................passed
+And sepeti goruntuleyi tiklar...............................................passed
+And sepet sayfasinda oldugunu test eder.....................................passed
+And proceed to checkout butonuna tiklar.....................................passed
+And Register-login butonuna tiklar..........................................passed
+And yeni kullanici olusturur................................................passed
+And ACCOUNT CREATED! yazisinin goruntulendigini test eder ve Continue butonuna tiklar.passed
+And 'Logged in as username' textinin gorunur olugunu test eder..............passed
+And sepet butonunu tiklar ve urunun sepette oldugunu test eder..............passed
+And proceed to checkout butonuna tiklar.....................................passed
+And siparis adresinin goruntulendigini test eder............................passed
+And aciklama alanina bilgi girer ve siparis veri tiklar.....................passed
+And kredi karti bilgilerini girer ve siparisi tamamla ve ode'yi tiklar......passed
+And Your order has been placed successfully! yazsinin goruntulendigini test eder.passed
+And bir onceki sayfaya gider................................................passed
+And Download Invoice butonuna tiklar ve invoice dosyasinin indigini test eder.passed
+And Continue button tiklar..................................................passed
 Then sayfayi kapatir........................................................passed
 ]]>
         </system-out>

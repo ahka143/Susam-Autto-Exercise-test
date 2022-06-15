@@ -90,10 +90,10 @@ public class AutoExercisePage_Ahmet {
     @FindBy(xpath = "(//td[@class='cart_price'])[2]")
     public WebElement ikinciUrunFiyat;
 
-    @FindBy (xpath = "(//button[@class='disabled'])[1]")
+    @FindBy(xpath = "(//button[@class='disabled'])[1]")
     public WebElement ilkUrunSepetAdet;
 
-    @FindBy (xpath = "(//button[@class='disabled'])[2]")
+    @FindBy(xpath = "(//button[@class='disabled'])[2]")
     public WebElement ikinciUrunSepetAdet;
 
     @FindBy(xpath = "(//p[@class='cart_total_price'])[1]")
@@ -102,4 +102,65 @@ public class AutoExercisePage_Ahmet {
     @FindBy(xpath = "(//p[@class='cart_total_price'])[2]")
     public WebElement ikinciUrunToplamFiyat;
 
+    @FindBy(className = "active")
+    public WebElement sepetSayfasiText;
+
+    @FindBy(xpath = "//*[text()='Proceed To Checkout']")
+    public WebElement proceedToCheckoutButonu;
+
+    @FindBy(id = "address_delivery")
+    public WebElement adresDetayiText;
+
+    @FindBy(className = "form-control")
+    public WebElement commenttextBox;
+
+    @FindBy(linkText = "Place Order")
+    public WebElement placeOrderButonu;
+
+    @FindBy(name = "name_on_card")
+    public WebElement kartUzerindekiIsimTextBox;
+
+    @FindBy(xpath = "(//div[@class='col-md-12 form-group'])[1]")
+    public WebElement siparisAlindiText;
+
+    @FindBy(xpath = "//input[@id='search_product']")
+    public WebElement searchProductTextBox;
+
+    @FindBy(xpath = "//i[@class='fa fa-search']")
+    public WebElement aramaButonu;
+
+    @FindBy(xpath = "//h2[@class='title text-center']")
+    public WebElement searchedProductsText;
+
+    @FindBy(xpath = "(//div[@class='col-sm-4'])[2]")
+    public WebElement aramaSonucElementi;
+
+    @FindBy(xpath = "//i[@class='fa fa-shopping-cart']")
+    public WebElement chartButton;
+
+    @FindBy(xpath = "//button[@class='form-control btn btn-primary submit-button']")
+    public WebElement odemeYapButonu;
+
+    @FindBy(xpath = "//i[@class='fa fa-trash-o']")
+    public WebElement deleteAccountButonu;
+
+    @FindBy(xpath = "//li[@class='active']")
+    public WebElement shoppingChartText;
+
+    @FindBy(xpath = "(//p[@class='text-center'])[2]")
+    public WebElement ikinciRegisterButonu;
+
+    @FindBy(xpath = "//input[@placeholder='Name']")
+    public WebElement nameTextBox;
+    @FindBy (xpath = "//input[@id='id_gender1']")
+    public WebElement mrRadioButton;
+
+    @FindBy (xpath = "//*[text()='Account Created!']")
+    public WebElement accountCreatedText;
+
+    @FindBy(linkText = "Continue")
+    public WebElement continueButonu;
+
+    @FindBy(linkText = "Download Invoice")
+    public WebElement downloadInvoiceButton;
 }
