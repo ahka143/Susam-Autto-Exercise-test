@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="29.692">
     <testcase classname="AutomationExercise sitesini test eder" name="TC02 Login User with correct email and password" time="28.84">
         <system-out>
@@ -12,6 +13,19 @@ And Verify that Logged in as username is visible............................pass
 And Click Delete Account button.............................................passed
 And Verify that ACCOUNT DELETED! is visible.................................passed
 And Close browser...........................................................passed
+=======
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.163">
+    <testcase classname="Verify Scroll Up without 'Arrow' button and Scroll Down functionality" name="Case 3 Login User with incorrect email and password" time="14.973">
+        <system-out>
+            <![CDATA[Given User goes to "autoUrl" website........................................passed
+And Verify that home page is visible successfully...........................passed
+And Click Signup Login button...............................................passed
+And Verify Login to your account is visible.................................passed
+And Enter incorrect email address and password..............................passed
+And Click login button......................................................passed
+And Verify error Your email or password is incorrect! is visible............passed
+And Closes the page.........................................................passed
+>>>>>>> c9a7a49d0d5e71f63fc1dd624f515c4a8a4f86d2
 ]]>
         </system-out>
     </testcase>
