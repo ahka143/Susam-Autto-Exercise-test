@@ -12,8 +12,6 @@ public class AutoExercisePage_Sena {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    // deneme
-
     @FindBy(xpath = "//a[text()=' Signup / Login']")
     public WebElement signupLoginButton;
 
